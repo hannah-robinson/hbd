@@ -1,5 +1,4 @@
 const balloonBtn = document.querySelector('.balloon-stack');
-const clickMe = document.querySelector('.click-me');
 const container = document.querySelector('.container');
 const text = document.querySelector('h1');
 const audio = document.querySelector('#player');
@@ -8,7 +7,6 @@ container.addEventListener('click', makeBalloonsFly);
 
 function makeBalloonsFly() {
   audio.play();
-  clickMe.remove();
   container.removeEventListener('click', makeBalloonsFly);
   balloonBtn.remove();
   text.innerHTML = 'Whippeee!!!';
