@@ -1,30 +1,29 @@
-const balloonBtn = document.querySelector('.balloon-stack');
+const heartBtn = document.querySelector('.heart-stack');
 const container = document.querySelector('.container');
 const text = document.querySelector('h1');
 const audio = document.querySelector('#player');
 
-container.addEventListener('click', makeBalloonsFly);
+container.addEventListener('click', makeHeartsFly);
 
-function makeBalloonsFly() {
+function makeHeartsFly() {
   audio.play();
-  container.removeEventListener('click', makeBalloonsFly);
-  balloonBtn.remove();
-  text.innerHTML = 'Whippeee!!!';
-  text.classList.add('h1-clicked');
-  container.classList.add('container-clicked');
+  container.removeEventListener('click', makeHeartsFly);
+  heartBtn.remove();
+  text.innerHTML = 'Whacky doo!!!';
+  // text.classList.add('h1-clicked');
 
-  const balloonEmoji = {
-    0: "🎈",
-    1: "🎈",
-    2: "🎈",
-    3: "🎈",
-    4: "🎈",
-    5: "🎈",
-    6: "🎈",
-    7: "🎈"
+  const heartEmoji = {
+    0: "💙",
+    1: "💚",
+    2: "💛",
+    3: "💕",
+    4: "🧡",
+    5: "💜",
+    6: "❤️",
+    7: "💕"
   };
 
-  // Add for-loop to create flying balloons
+  // Add for-loop to create flying hearts
 
   for (let i = 0; i < 8; i++) {
     let randomNumber1 = Math.floor(Math.random() * 8);
@@ -43,129 +42,129 @@ function makeBalloonsFly() {
     let randomNumber14 = Math.floor(Math.random() * 8);
 
     setTimeout(() => {
-      const balloonWrapper = document.createElement('div');
-      const balloon = document.createElement('div');
-      balloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + i);
-      container.appendChild(balloonWrapper);
-      balloon.classList.add('balloon', 'balloon-' + i);
-      balloon.innerHTML = balloonEmoji[randomNumber1];
-      balloonWrapper.appendChild(balloon);
+      const heartWrapper = document.createElement('div');
+      const heart = document.createElement('div');
+      heartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + i);
+      container.appendChild(heartWrapper);
+      heart.classList.add('heart', 'heart-' + i);
+      heart.innerHTML = heartEmoji[randomNumber1];
+      heartWrapper.appendChild(heart);
 
-      const altBalloonWrapper = document.createElement('div');
-      const altBalloon = document.createElement('div');
-      altBalloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + (8 + i));
-      altBalloon.classList.add('balloon', 'balloon-' + (8 + i));
-      altBalloon.innerHTML = balloonEmoji[randomNumber2];
-      container.appendChild(altBalloonWrapper);
-      altBalloonWrapper.appendChild(altBalloon);
+      const altHeartWrapper = document.createElement('div');
+      const altHeart = document.createElement('div');
+      altHeartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + (8 + i));
+      altHeart.classList.add('heart', 'heart-' + (8 + i));
+      altHeart.innerHTML = heartEmoji[randomNumber2];
+      container.appendChild(altHeartWrapper);
+      altHeartWrapper.appendChild(altHeart);
     }, (200 * i))
 
     setTimeout(() => {
-      const balloonWrapper = document.createElement('div');
-      const balloon = document.createElement('div');
-      balloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + i);
-      container.appendChild(balloonWrapper);
-      balloon.classList.add('balloon', 'balloon-' + i);
-      balloon.innerHTML = balloonEmoji[randomNumber3];
-      balloonWrapper.appendChild(balloon);
+      const heartWrapper = document.createElement('div');
+      const heart = document.createElement('div');
+      heartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + i);
+      container.appendChild(heartWrapper);
+      heart.classList.add('heart', 'heart-' + i);
+      heart.innerHTML = heartEmoji[randomNumber3];
+      heartWrapper.appendChild(heart);
 
-      const altBalloonWrapper = document.createElement('div');
-      const altBalloon = document.createElement('div');
-      altBalloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + (8 + i));
-      altBalloon.classList.add('balloon', 'balloon-' + (8 + i));
-      altBalloon.innerHTML = balloonEmoji[randomNumber4];
-      container.appendChild(altBalloonWrapper);
-      altBalloonWrapper.appendChild(altBalloon);
+      const altHeartWrapper = document.createElement('div');
+      const altHeart = document.createElement('div');
+      altHeartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + (8 + i));
+      altHeart.classList.add('heart', 'heart-' + (8 + i));
+      altHeart.innerHTML = heartEmoji[randomNumber4];
+      container.appendChild(altHeartWrapper);
+      altHeartWrapper.appendChild(altHeart);
     }, (250 * i))
 
     setTimeout(() => {
-      const balloonWrapper = document.createElement('div');
-      const balloon = document.createElement('div');
-      balloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + i);
-      container.appendChild(balloonWrapper);
-      balloon.classList.add('balloon', 'balloon-' + i);
-      balloon.innerHTML = balloonEmoji[randomNumber5];
-      balloonWrapper.appendChild(balloon);
+      const heartWrapper = document.createElement('div');
+      const heart = document.createElement('div');
+      heartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + i);
+      container.appendChild(heartWrapper);
+      heart.classList.add('heart', 'heart-' + i);
+      heart.innerHTML = heartEmoji[randomNumber5];
+      heartWrapper.appendChild(heart);
 
-      const altBalloonWrapper = document.createElement('div');
-      const altBalloon = document.createElement('div');
-      altBalloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + (8 + i));
-      altBalloon.classList.add('balloon', 'balloon-' + (8 + i));
-      altBalloon.innerHTML = balloonEmoji[randomNumber6];
-      container.appendChild(altBalloonWrapper);
-      altBalloonWrapper.appendChild(altBalloon);
+      const altHeartWrapper = document.createElement('div');
+      const altHeart = document.createElement('div');
+      altHeartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + (8 + i));
+      altHeart.classList.add('heart', 'heart-' + (8 + i));
+      altHeart.innerHTML = heartEmoji[randomNumber6];
+      container.appendChild(altHeartWrapper);
+      altHeartWrapper.appendChild(altHeart);
     }, (300 * i))
 
     setTimeout(() => {
-      const balloonWrapper = document.createElement('div');
-      const balloon = document.createElement('div');
-      balloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + i);
-      container.appendChild(balloonWrapper);
-      balloon.classList.add('balloon', 'balloon-' + i);
-      balloon.innerHTML = balloonEmoji[randomNumber7];
-      balloonWrapper.appendChild(balloon);
+      const heartWrapper = document.createElement('div');
+      const heart = document.createElement('div');
+      heartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + i);
+      container.appendChild(heartWrapper);
+      heart.classList.add('heart', 'heart-' + i);
+      heart.innerHTML = heartEmoji[randomNumber7];
+      heartWrapper.appendChild(heart);
 
-      const altBalloonWrapper = document.createElement('div');
-      const altBalloon = document.createElement('div');
-      altBalloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + (8 + i));
-      altBalloon.classList.add('balloon', 'balloon-' + (8 + i));
-      altBalloon.innerHTML = balloonEmoji[randomNumber8];
-      container.appendChild(altBalloonWrapper);
-      altBalloonWrapper.appendChild(altBalloon);
+      const altHeartWrapper = document.createElement('div');
+      const altHeart = document.createElement('div');
+      altHeartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + (8 + i));
+      altHeart.classList.add('heart', 'heart-' + (8 + i));
+      altHeart.innerHTML = heartEmoji[randomNumber8];
+      container.appendChild(altHeartWrapper);
+      altHeartWrapper.appendChild(altHeart);
     }, (360 * i))
 
     setTimeout(() => {
-      const balloonWrapper = document.createElement('div');
-      const balloon = document.createElement('div');
-      balloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + i);
-      container.appendChild(balloonWrapper);
-      balloon.classList.add('balloon', 'balloon-' + i);
-      balloon.innerHTML = balloonEmoji[randomNumber9];
-      balloonWrapper.appendChild(balloon);
+      const heartWrapper = document.createElement('div');
+      const heart = document.createElement('div');
+      heartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + i);
+      container.appendChild(heartWrapper);
+      heart.classList.add('heart', 'heart-' + i);
+      heart.innerHTML = heartEmoji[randomNumber9];
+      heartWrapper.appendChild(heart);
 
-      const altBalloonWrapper = document.createElement('div');
-      const altBalloon = document.createElement('div');
-      altBalloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + (8 + i));
-      altBalloon.classList.add('balloon', 'balloon-' + (8 + i));
-      altBalloon.innerHTML = balloonEmoji[randomNumber10];
-      container.appendChild(altBalloonWrapper);
-      altBalloonWrapper.appendChild(altBalloon);
+      const altHeartWrapper = document.createElement('div');
+      const altHeart = document.createElement('div');
+      altHeartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + (8 + i));
+      altHeart.classList.add('heart', 'heart-' + (8 + i));
+      altHeart.innerHTML = heartEmoji[randomNumber10];
+      container.appendChild(altHeartWrapper);
+      altHeartWrapper.appendChild(altHeart);
     }, (400 * i))
 
     setTimeout(() => {
-      const balloonWrapper = document.createElement('div');
-      const balloon = document.createElement('div');
-      balloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + i);
-      container.appendChild(balloonWrapper);
-      balloon.classList.add('balloon', 'balloon-' + i);
-      balloon.innerHTML = balloonEmoji[randomNumber11];
-      balloonWrapper.appendChild(balloon);
+      const heartWrapper = document.createElement('div');
+      const heart = document.createElement('div');
+      heartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + i);
+      container.appendChild(heartWrapper);
+      heart.classList.add('heart', 'heart-' + i);
+      heart.innerHTML = heartEmoji[randomNumber11];
+      heartWrapper.appendChild(heart);
 
-      const altBalloonWrapper = document.createElement('div');
-      const altBalloon = document.createElement('div');
-      altBalloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + (8 + i));
-      altBalloon.classList.add('balloon', 'balloon-' + (8 + i));
-      altBalloon.innerHTML = balloonEmoji[randomNumber12];
-      container.appendChild(altBalloonWrapper);
-      altBalloonWrapper.appendChild(altBalloon);
+      const altHeartWrapper = document.createElement('div');
+      const altHeart = document.createElement('div');
+      altHeartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + (8 + i));
+      altHeart.classList.add('heart', 'heart-' + (8 + i));
+      altHeart.innerHTML = heartEmoji[randomNumber12];
+      container.appendChild(altHeartWrapper);
+      altHeartWrapper.appendChild(altHeart);
     }, (500 * i))
 
     setTimeout(() => {
-      const balloonWrapper = document.createElement('div');
-      const balloon = document.createElement('div');
-      balloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + i);
-      container.appendChild(balloonWrapper);
-      balloon.classList.add('balloon', 'balloon-' + i);
-      balloon.innerHTML = balloonEmoji[randomNumber13];
-      balloonWrapper.appendChild(balloon);
+      const heartWrapper = document.createElement('div');
+      const heart = document.createElement('div');
+      heartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + i);
+      container.appendChild(heartWrapper);
+      heart.classList.add('heart', 'heart-' + i);
+      heart.innerHTML = heartEmoji[randomNumber13];
+      heartWrapper.appendChild(heart);
 
-      const altBalloonWrapper = document.createElement('div');
-      const altBalloon = document.createElement('div');
-      altBalloonWrapper.classList.add('balloon-wrapper', 'balloon-wrapper-' + (8 + i));
-      altBalloon.classList.add('balloon', 'balloon-' + (8 + i));
-      altBalloon.innerHTML = balloonEmoji[randomNumber14];
-      container.appendChild(altBalloonWrapper);
-      altBalloonWrapper.appendChild(altBalloon);
+      const altHeartWrapper = document.createElement('div');
+      const altHeart = document.createElement('div');
+      altHeartWrapper.classList.add('heart-wrapper', 'heart-wrapper-' + (8 + i));
+      altHeart.classList.add('heart', 'heart-' + (8 + i));
+      altHeart.innerHTML = heartEmoji[randomNumber14];
+      container.appendChild(altHeartWrapper);
+      altHeartWrapper.appendChild(altHeart);
     }, (540 * i))
   }
 }
