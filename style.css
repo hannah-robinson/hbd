@@ -17,8 +17,7 @@ body {
   background-color: #fff;
   background-image: url(./confetti.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-repeat: no-repeat; */
 }
 
 .container {
@@ -30,11 +29,6 @@ body {
 h1 {
   font-size: 5em;
   text-align: center;
-  padding-top: .5em;
-}
-
-.h1-clicked {
-  padding-bottom: 7em;
 }
 
 .heart-stack {
@@ -290,5 +284,13 @@ h1 {
     transform: translateY(1000px);
     opacity: 100;
   }
+}
+
+/* Font resizing for mobile */
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 2.5em;
+  }  
 }
 

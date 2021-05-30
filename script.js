@@ -10,7 +10,6 @@ function makeHeartsFly() {
   container.removeEventListener('click', makeHeartsFly);
   heartBtn.remove();
   text.innerHTML = 'Whacky doo!!!';
-  // text.classList.add('h1-clicked');
 
   const heartEmoji = {
     0: "💙",
